@@ -1,0 +1,772 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Material UI Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        html,
+        body {
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+            overflow-x: hidden;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        body {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        .navbar {
+            padding: 0px 8px;
+            border-bottom: 0.5px solid whitesmoke;
+            backdrop-filter: contrast(120%);
+        }
+
+        #heading {
+            font-size: 20px;
+            margin: 0px;
+            padding: 0px;
+            margin-top: 2px;
+        }
+
+        #image {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-image: url({% static 'img/13.jpg' %} );
+            background-position: center;
+            background-repeat: repeat;
+
+        }
+
+        #bd,
+        #bd2 {
+            border: 4px solid rgb(0, 187, 171);
+        }
+
+        .mkl {
+            list-style: none;
+        }
+
+        .bg {
+            background-color: rgb(0, 45, 66);
+        }
+
+
+
+        .fs {
+            font-size: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(175, 175, 175);
+        }
+
+        #colbt {
+            background-color: rgb(206, 206, 206);
+
+            color: black;
+            border-radius: 25px;
+        }
+
+        #colbt:hover {
+            background-color: rgb(0, 143, 156);
+        }
+
+        .review::-webkit-scrollbar {
+            display: none;
+        }
+
+        .review {
+            overflow-y: scroll;
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+        }
+
+        .reviewname {
+            display: flex;
+            align-items: center;
+        }
+
+        .reviewname>i {
+            font-size: xx-large;
+        }
+
+        .reviewname>span {
+            margin-left: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .reviewcontainer>span {
+            display: block;
+            font-size: 20px;
+        }
+
+        .reviewcontainer>p {
+            font-size: 12px;
+            margin-bottom: 2px;
+        }
+
+        .reviewtext {
+            font-size: 14px !important;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
+
+        .event {
+            justify-content: center;
+        }
+
+        .eventbutton {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+
+        }
+
+        .eventbutton>button {
+            display: inline;
+        }
+    </style>
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+    <!-- Code for navigation Bar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-transparent ">
+        <div>
+            <img src="{% static 'img/Mnit_logo.png' %} " height="50px" width="50px" class="mr-auto" id="iamge">
+            <img src="{% static 'img/EC Logo.png' %}" height="52px" width="52px" class="mr-auto ml-1" id="iamge">
+        </div>
+
+        <div class="mr-auto ml-2 text-white">
+            <p id="heading" class="mt-2">Energy Club</p>
+            <p>Centre For Energy and Environment</p>
+        </div>
+
+        <button class="navbar-toggler border border-dark" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon my-toggler "></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto  ">
+                <li class="nav-item px-2">
+                    <a class="nav-link " href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item active px-2">
+                    <a class="nav-link text-white" href="/events">Events</a>
+                </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link" href="/achievements">Achievements</a>
+                </li>
+
+                <li class="nav-item px-2">
+                    <a class="nav-link" href="/team">Team</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+
+    <div class="col-sm-6 mx-auto my-5">
+        <video src="{% static 'video/video.mp4' %} " class="w-100 border border-dark" type="video/mp4" autoplay></video>
+    </div>
+
+
+    <div class="container brc shadow p-4 bg-transparent rounded text-white text-justify" id="bd">
+        <h2 class="mt-3 event">SEEQ</h2>
+
+        <p class="text-justify my-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque animi eius
+            alias
+            culpa modi sunt voluptatem esse qui veniam tempora tenetur recusandae ex, sint laborum illum consectetur
+            fuga?
+            Dolor libero commodi fugit tempora laboriosam, consequatur eius ratione quia quos quo quaerat mollitia,
+            neque ut
+            corrupti voluptatibus pariatur aliquid quibus dam! Dolor cum, autem nesciunt dolorum error corporis ducimus
+            quo
+            debitis vel quod iste consequuntur explicabo animi, laudantium excepturi, at quam nisi eligendi alias non.
+            Rem,
+            quibusdam voluptates recusandae suscipit nobis odio nam debitis dolorum dolorem atque perferendis ab, esse
+            laboriosam, quis dicta doloremque nostrum odit veniam. At officia alias doloremque accusamus?Lorem ipsum,
+            dolor
+            sit amet consectsi animi maxime beatae illo eveniet officiis
+            laboriosam! Corporis architecto est porro, tempora quisquaint m sinventore ipsum amet necessitatibus. Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Saepe, aperiam distinctio. Atque at et praesentium
+            voluptatum est quam ipsam cumque, ad enim sunt consequatur nesciunt! Laboriosam, accusantium. Ea, ut
+            voluptatibus Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores deserunt laboriosam culpa
+            pariatur iusto animi unde beatae, cupiditate cumque nostrum distinctio. Maxime amet nihil deserunt illum,
+            vero itaque veniam dolorem.
+        </p>
+
+
+        <!-- Buttons to handle register and other stuff -->
+
+
+        <div class="eventbutton">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-success bg-dark text-white  mx-2 w-auto mt-3" data-toggle="modal"
+                data-target="#exampleModal">
+                Register Yourself
+            </button>
+
+            <!-- code for sample papers -->
+
+
+            <button type="button" class="btn btn-success bg-dark text-white mx-2 w-auto mt-3" data-toggle="modal"
+                data-target="#exampleModa2">
+                Sample Papers
+            </button>
+
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-success bg-dark text-white mx-2 w-auto  mt-3" data-toggle="modal"
+                data-target="#exampleModa3">
+                Past Winners
+            </button>
+
+
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-success bg-dark text-white mx-2 w-auto  mt-3" data-toggle="modal"
+                data-target="#exampleModa4">
+                Reviews
+            </button>
+        </div>
+
+
+        <!-- Registration Form for Seeq -->
+
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-dark" id="exampleModalLabel">SEEQ Registration Form</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="register" method="POST" class="text-dark">
+                            {% csrf_token %}
+                            <div class="form-group row">
+                                <label for="inputname1" class="col-sm-3 col-form-label">Name 1:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="inputname1" name="name1"
+                                        placeholder="First Participant Name" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputname2" class="col-sm-3 col-form-label">Name 2:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="inputname2" name="name2"
+                                        placeholder="Second Participant Name">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputEmail" class="col-sm-3 col-form-label">Email:</label>
+                                <div class="col-sm-9">
+                                    <input type="email" class="form-control" id="inputEmail" name="email"
+                                        placeholder="Email Address" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputNumber" class="col-sm-3 col-form-label">Mobile No.:</label>
+                                <div class="col-sm-9">
+                                    <input type="tel" class="form-control" pattern="[0-9]{10}" name="phone"
+                                        id="inputNumber" placeholder="10-digit Mobile Number " required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputCollege" class="col-sm-6 col-form-label">College Name</label>
+                                <div class="col-sm-12">
+                                    <textarea class="form-control" id="inputCollege" name="college"
+                                        placeholder="Your College Name:" required></textarea>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group row text-right">
+                                <div class="col-sm-12">
+                                    <button type="submit" class="btn btn-info">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Sample papers and Previous Question Papers -->
+
+        <div class="modal fade" id="exampleModa2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabe2"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabe2">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-dark">
+
+                        <ul style="list-style: disc;">
+                            <li><a href="{% static 'files/offline.pdf' %}" target="_balnk">QuestionPaper-SEEQ'19</a>
+                            </li>
+                            <li><a href="#" target="_balnk">QuestionPaper-SEEQ'18</a></li>
+                            <li><a href="#" target="_balnk">QuestionPaper-SEEQ'17</a></li>
+                            <li><a href="#" target="_balnk">QuestionPaper-SEEQ'16</a></li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Past Winners of Seeq different editions -->
+
+        <div class="modal fade " id="exampleModa3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabe3"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabe3">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Reviews of SEEQ -->
+
+        <div class="modal fade review " id="exampleModa4" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLabe4" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content ">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-dark" id="exampleModalLabe4">Reviews</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body review text-dark">
+                        <form action="register" method="POST" class="text-dark">
+                            {% csrf_token %}
+                            <div class="form-group row">
+                                <label for="review" class="col-sm-6 col-form-label"></label>
+                                <div class="col-sm-12">
+                                    <textarea rows="5" class="form-control" id="review" name="review"
+                                        placeholder="Post your review:" required></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row text-right">
+                                <div class="col-sm-12">
+                                    <button type="submit" class="btn btn-info">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="reviewcontainer">
+                            <div class="reviewname">
+                                <i class="material-icons">account_circle</i>
+                                <span>Arush Kumar</span>
+                            </div>
+                            <span>☆☆☆☆☆</span>
+                            <p>Posted on 28 March 2019</p>
+                            <p class="reviewtext">Seeq is the rajasthan biggest energy quiz. I have participated in
+                                seeq'19. it has
+                                different rounds like buzzer round rapid fire.</p>
+                            <hr>
+                        </div>
+                        <div class="reviewcontainer">
+                            <div class="reviewname">
+                                <i class="material-icons">account_circle</i>
+                                <span>Arush Kumar</span>
+                            </div>
+                            <span>☆☆☆☆☆</span>
+                            <p>Posted on 28 March 2019</p>
+                            <p class="reviewtext">Seeq is the rajasthan biggest energy quiz. I have participated in
+                                seeq'19. it has
+                                different rounds like buzzer round rapid fire.</p>
+                            <hr>
+                        </div>
+                        <div class="reviewcontainer">
+                            <div class="reviewname">
+                                <i class="material-icons">account_circle</i>
+                                <span>Arush Kumar</span>
+                            </div>
+                            <span>☆☆☆☆☆</span>
+                            <p>Posted on 28 March 2019</p>
+                            <p class="reviewtext">Seeq is the rajasthan biggest energy quiz. I have participated in
+                                seeq'19. it has
+                                different rounds like buzzer round rapid fire.</p>
+                            <hr>
+                        </div>
+                        <div class="reviewcontainer">
+                            <div class="reviewname">
+                                <i class="material-icons">account_circle</i>
+                                <span>Arush Kumar</span>
+                            </div>
+                            <span>☆☆☆☆☆</span>
+                            <p>Posted on 28 March 2019</p>
+                            <p class="reviewtext">Seeq is the rajasthan biggest energy quiz. I have participated in
+                                seeq'19. it has
+                                different rounds like buzzer round rapid fire.</p>
+                            <hr>
+                        </div>
+                        <div class="reviewcontainer">
+                            <div class="reviewname">
+                                <i class="material-icons">account_circle</i>
+                                <span>Arush Kumar</span>
+                            </div>
+                            <span>☆☆☆☆☆</span>
+                            <p>Posted on 28 March 2019</p>
+                            <p class="reviewtext">Seeq is the rajasthan biggest energy quiz. I have participated in
+                                seeq'19. it has
+                                different rounds like buzzer round rapid fire.</p>
+                            <hr>
+                        </div>
+                        <div class="reviewcontainer">
+                            <div class="reviewname">
+                                <i class="material-icons">account_circle</i>
+                                <span>Arush Kumar</span>
+                            </div>
+                            <span>☆☆☆☆☆</span>
+                            <p>Posted on 28 March 2019</p>
+                            <p class="reviewtext">Seeq is the rajasthan biggest energy quiz. I have participated in
+                                seeq'19. it has
+                                different rounds like buzzer round rapid fire.</p>
+                            <hr>
+                        </div>
+                        <!-- <div class="rating">
+                                <input type="radio" name="rating" value="5" id="5">
+                                <label for="1">☆</label>
+                                <label for="2">☆</label> <input type="radio" name="rating" value="1" id="1">
+                                <label for="3">☆</label> <input type="radio" name="rating" value="2" id="2">
+                                <label for="4">☆</label> <input type="radio" name="rating" value="3" id="3">
+                                <label for="5">☆</label> <input type="radio" name="rating" value="4" id="4">
+                            </div> -->
+
+                    </div>
+                    <div class="modal-footer">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="container  shadow p-4 mt-5  bg-transparent rounded text-white text-justify" id="bd2">
+        <h2 class="mt-3">GREENOVATION</h2>
+
+        <p class="text-justify my-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque animi eius
+            alias
+            culpa modi sunt voluptatem esse qui veniam tempora tenetur recusandae ex, sint laborum illum consectetur
+            fuga?
+            Dolor libero commodi fugit tempora laboriosam, consequatur eius ratione quia quos quo quaerat mollitia,
+            neque ut
+            corrupti voluptatibus pariatur aliquid quibus dam! Dolor cum, autem nesciunt dolorum error corporis ducimus
+            quo
+            debitis vel quod iste consequuntur explicabo animi, laudantium excepturi, at quam nisi eligendi alias non.
+            Rem,
+            quibusdam voluptates recusandae suscipit nobis odio nam debitis dolorum dolorem atque perferendis ab, esse
+            laboriosam, quis dicta doloremque nostrum odit veniam. At officia alias doloremque accusamus?Lorem ipsum,
+            dolor
+            sit amet consectsi animi maxime beatae illo eveniet officiis
+            laboriosam! Corporis architecto est porro, tempora quisquaint m sinventore ipsum amet necessitatibus. Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Saepe, aperiam distinctio. Atque at et praesentium
+            voluptatum est quam ipsam cumque, ad enim sunt consequatur nesciunt! Laboriosam, accusantium. Ea, ut
+            voluptatibus Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores deserunt laboriosam culpa
+            pariatur iusto animi unde beatae, cupiditate cumque nostrum distinctio. Maxime amet nihil deserunt illum,
+            vero itaque veniam dolorem.
+        </p>
+
+        <div class="eventbutton">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-success bg-dark text-white  w-auto mx-2 mt-3" data-toggle="modal"
+                data-target="#exampleModa5">
+                Register Yourself
+            </button>
+
+            <button type="button" class="btn btn-success bg-dark text-white w-auto mx-2 mt-3" data-toggle="modal"
+                data-target="#exampleModa6">
+                Sample Papers
+            </button>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-success bg-dark text-white w-auto mx-2 mt-3" data-toggle="modal"
+                data-target="#exampleModa7">
+                Past-Winners
+            </button>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-success bg-dark text-white w-auto mx-2 mt-3" data-toggle="modal"
+                data-target="#exampleModa8">
+                Reviews
+            </button>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModa5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabe5"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabe5">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                        It's temorarily suspended.Stay tuned.
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- code for sample papers -->
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModa6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabe6"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabe6">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-dark">
+
+                        <ul style="list-style: disc;">
+                            <li><a href="#">QuestionPaper-SEEQ'19</a></li>
+                            <li><a href="#">QuestionPaper-SEEQ'18</a></li>
+                            <li><a href="#">QuestionPaper-SEEQ'17</a></li>
+                            <li><a href="#">QuestionPaper-SEEQ'16</a></li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModa7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabe7"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabe7">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModa8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabe8"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabe8">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- footer  -->
+
+
+    <footer class="bg mt-5" style="height:auto;">
+
+        <div class="col-sm-7 mx-auto text-center pt-5 ">
+            <h5 class="text-white">
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente laboriosam, tempore, esse fugiat
+                voluptatibus consequ
+                Recusandae, provident tempora? Quidem magni, facere porro quia ea facilis exercitationem accusamus.""
+            </h5>
+        </div>
+        <div class="container pt-4 mx-auto text-center text-white ">
+
+
+
+            <!-- Button trigger modal -->
+            <button type="button" id="colbt" class="btn" data-toggle="modal" data-target="#exampleModal10">
+                Suggest Something
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade text-justify" id="exampleModal10" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="" class="text-dark">
+                                <div class="form-group row">
+                                    <label for="inputEmail3" class="col-sm-3 col-form-label">Name</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="inputEmail3"
+                                            placeholder="Your Name">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputEmail" class="col-sm-3 col-form-label">Email</label>
+                                    <div class="col-sm-9">
+                                        <input type="email" class="form-control" id="inputEmail"
+                                            placeholder="Your Email Id.">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputSuggest" class="col-sm-6 col-form-label">Any Suggestions</label>
+                                    <div class="col-sm-12">
+                                        <textarea class="form-control" id="inputSuggest"
+                                            placeholder="Write your suggestion here!"></textarea>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group row ">
+                                    <div class="col-sm-10">
+                                        <button type="submit" class="btn btn-dark">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="pt-2 fs text-center">Connect With Us!</h3>
+        </div>
+        <div class="row pb-2">
+            <ul class="row mx-auto mkl">
+                <li class="p-2"><a href="https://www.facebook.com/search/top/?q=Energy%20Club%20-%20MNIT%20Jaipur"><img
+                            src="{% static 'img/facebook1.png' %}" height="40px" width="40px" alt=""></a></li>
+                <li class="p-2"><a href="https://www.instagram.com/the_energy_club/"><img
+                            src="{% static 'img/instagram1.png' %}" height="40px" width="40px" alt=""></a></li>
+                <li class="p-2"><a href="https://in.linkedin.com/company/energy-club-mnit-jaipur"><img
+                            src="{% static 'img/linkedin1.png' %}" height="40px" width="40px" alt=""></a></li>
+                <li class="p-2 pr-5"><a href="mailto:energyclub@mnit.ac.in"><img src="{% static 'img/gmail1.png' %}"
+                            height="40px" width="40px" alt=""></a></li>
+            </ul>
+        </div>
+
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

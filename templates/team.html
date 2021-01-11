@@ -1,0 +1,391 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <!-- Bootstrap CSS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <style>
+    html,
+    body {
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+      overflow-x: hidden;
+      background-color: #dddce0;
+      -ms-overflow-style: none;
+      /* IE and Edge */
+      scrollbar-width: none;
+      /* Firefox */
+    }
+
+    body::-webkit-scrollbar {
+      display: none;
+    }
+
+    .navbar {
+      padding: 0px 8px;
+
+    }
+
+    #heading {
+      font-size: 20px;
+      margin: 0px;
+      padding: 0px;
+      margin-top: 2px;
+    }
+
+
+    #image {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .ht {
+      height: 500px;
+    }
+
+    .mkl {
+      list-style: none;
+    }
+
+    .bg {
+      background-color: rgb(0, 45, 66);
+    }
+
+    .fs {
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: rgb(175, 175, 175);
+    }
+
+    #colbt {
+      background-color: rgb(206, 206, 206);
+      color: black;
+      border-radius: 25px;
+      transition: background 1s ease;
+    }
+
+    #colbt:hover {
+      background-color: rgb(0, 143, 156);
+    }
+
+    .alumnibox {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .alumnicontainer {
+      display: flex;
+      margin: 10px 10px;
+      background-color: white;
+      padding: 20px;
+      height: 400px;
+      flex-direction: column;
+      align-items: center;
+      transition: background 1s ease;
+    }
+
+    .alumniphoto {
+      height: 140px;
+      width: 140px;
+      border-radius: 80px;
+    }
+
+    .alumnicontainer>p {
+      display: block;
+      margin: 1px;
+    }
+
+    .location {
+      font-size: 15px;
+      font-weight: 400;
+
+    }
+
+    .alumnicontainer:hover {
+      background-color: turquoise;
+      cursor: pointer;
+      color: white;
+    }
+
+    .alumnicontainer>p {
+      display: flex;
+      align-items: center;
+    }
+
+    .alumnicontainer>p>.material-icons {
+      font-size: large;
+    }
+
+    .alumniname {
+      margin-top: 9px !important;
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .alumniheader {
+      height: 300px;
+      background-color: white;
+    }
+
+    .alumniheader {
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .alumniheader>h1 {
+      text-align: center !important;
+      font-size: 80px;
+      margin-top: 15px;
+      color: #233466;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 500;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      line-height: 80px;
+    }
+
+    .alumniheader>p {
+      padding: 3px;
+      font-family: 'Raleway', sans-serif;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      color: #484848;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;900&family=Raleway:wght@500&display=swap');
+  </style>
+  <title>Hello, world!</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
+    <div>
+      <img src="{% static 'img/Mnit_logo.png' %} " height="50px" width="50px" class="mr-auto" id="iamge">
+      <img src="{% static 'img/EC Logo.png' %} " height="52px" width="52px" class="mr-auto ml-1" id="iamge">
+    </div>
+
+    <div class="mr-auto ml-2 text-white">
+      <p id="heading" class="mt-2">Energy Club</p>
+      <p>Centre For Energy and Environment</p>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto ">
+        <li class="nav-item px-2">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item px-2">
+          <a class="nav-link" href="/events">Events</a>
+        </li>
+        <li class="nav-item px-2">
+          <a class="nav-link" href="/achievements">Achievements</a>
+        </li>
+        <li class="nav-item px-2 active">
+          <a class="nav-link" href="/team">Team</a>
+        </li>
+
+      </ul>
+
+    </div>
+  </nav>
+
+  <div class="alumniheader">
+    <h1 class="text-justify">Alumni Network</h1>
+    <p>We are building a network of some environmentalist over the future of time.</p>
+  </div>
+  <div class="container my-5 p-3 text-center">
+    <div class="row alumnibox text-justify">
+      <div class="col-sm-12 col-lg-5 alumnicontainer shadow rounded">
+        <img src="{% static 'img/elon.jpg' %}" class="alumniphoto">
+        <p class="alumniname">
+          Vivek Kumar
+        </p>
+        <p>
+          <span class="material-icons">location_on</span>
+          <span class="location">Gurugram, Uttar Pradesh.</span>
+        </p>
+      </div>
+      <div class="col-sm-12 col-lg-5 alumnicontainer shadow rounded">
+        <img src="{% static 'img/elon.jpg' %}" class="alumniphoto">
+        <p class="alumniname">
+          Vivek Kumar
+        </p>
+        <p>
+          <span class="material-icons">location_on</span>
+          <span class="location">Gurugram, Uttar Pradesh.</span>
+        </p>
+      </div>
+      <div class="col-sm-12 col-lg-5 alumnicontainer shadow rounded">
+        <img src="{% static 'img/elon.jpg' %}" class="alumniphoto">
+        <p class="alumniname">
+          Vivek Kumar
+        </p>
+        <p>
+          <span class="material-icons">location_on</span>
+          <span class="location">Gurugram, Uttar Pradesh.</span>
+        </p>
+      </div>
+      <div class="col-sm-12 col-lg-5 alumnicontainer shadow rounded">
+        <img src="{% static 'img/elon.jpg' %}" class="alumniphoto">
+        <p class="alumniname">
+          Vivek Kumar
+        </p>
+        <p>
+          <span class="material-icons">location_on</span>
+          <span class="location">Gurugram, Uttar Pradesh.</span>
+        </p>
+      </div>
+      <div class="col-sm-12 col-lg-5 alumnicontainer shadow rounded">
+        <img src="{% static 'img/elon.jpg' %}" class="alumniphoto">
+        <p class="alumniname">
+          Vivek Kumar
+        </p>
+        <p>
+          <span class="material-icons">location_on</span>
+          <span class="location">Gurugram, Uttar Pradesh.</span>
+        </p>
+      </div>
+      <div class="col-sm-12 col-lg-5 alumnicontainer shadow rounded">
+        <img src="{% static 'img/elon.jpg' %}" class="alumniphoto">
+        <p class="alumniname">
+          Vivek Kumar
+        </p>
+        <p>
+          <span class="material-icons">location_on</span>
+          <span class="location">Gurugram, Uttar Pradesh.</span>
+        </p>
+      </div>
+      <div class="col-sm-12 col-lg-5 alumnicontainer shadow rounded">
+        <img src="{% static 'img/elon.jpg' %}" class="alumniphoto">
+        <p class="alumniname">
+          Vivek Kumar
+        </p>
+        <p>
+          <span class="material-icons">location_on</span>
+          <span class="location">Gurugram, Uttar Pradesh.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <footer class="bg mt-5" style="height:auto;">
+
+    <div class="col-sm-7 mx-auto text-center pt-5 ">
+      <h5 class="text-white">
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente laboriosam, tempore, esse fugiat
+        voluptatibus consequ
+        Recusandae, provident tempora? Quidem magni, facere porro quia ea facilis exercitationem accusamus.""
+      </h5>
+    </div>
+    <div class="container pt-4 mx-auto text-center text-white ">
+
+
+
+      <!-- Button trigger modal -->
+      <button type="button" id="colbt" class="btn" data-toggle="modal" data-target="#exampleModal">
+        Suggest Something
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade text-justify" id="exampleModal" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Suggestion Form</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form action="suggestion" method="POST" class="text-dark">
+                {% csrf_token %}
+                <div class="form-group row">
+                  <label for="name" class="col-sm-3 col-form-label">Name</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="name" name="name" required placeholder="Your Name">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="inputSuggest" class="col-sm-6 col-form-label">Any Suggestions</label>
+                  <div class="col-sm-12">
+                    <textarea class="form-control" id="inputSuggest" name="suggest" required
+                      placeholder="Write your suggestion here!"></textarea>
+                  </div>
+                </div>
+
+
+                <div class="form-group row ">
+                  <div class="col-sm-12 ">
+                    <button type="submit " class=" btn btn-dark">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="pt-2 fs text-center">Connect With Us!</h3>
+    </div>
+    <div class="row pb-2">
+      <ul class="row mx-auto mkl">
+        <li class="p-2"><a href="https://www.facebook.com/search/top/?q=Energy%20Club%20-%20MNIT%20Jaipur"><img
+              src="{% static 'img/facebook1.png' %}" height="40px" width="40px" alt=""></a></li>
+        <li class="p-2"><a href="https://www.instagram.com/the_energy_club/"><img
+              src="{% static 'img/instagram1.png' %}" height="40px" width="40px" alt=""></a></li>
+        <li class="p-2"><a href="https://in.linkedin.com/company/energy-club-mnit-jaipur"><img
+              src="{% static 'img/linkedin1.png' %}" height="40px" width="40px" alt=""></a></li>
+        <li class="p-2 pr-5"><a href="mailto:energyclub@mnit.ac.in"><img src="{% static 'img/gmail1.png' %}"
+              height="40px" width="40px" alt=""></a></li>
+      </ul>
+    </div>
+
+    </div>
+  </footer>
+
+  </div>
+  </div>
+
+
+
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
