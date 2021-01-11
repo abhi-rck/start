@@ -340,11 +340,9 @@
                     <div class="modal-body text-dark">
 
                         <ul style="list-style: disc;">
-                            <li><a href="{% static 'files/offline.pdf' %}" target="_balnk">QuestionPaper-SEEQ'19</a>
-                            </li>
-                            <li><a href="#" target="_balnk">QuestionPaper-SEEQ'18</a></li>
-                            <li><a href="#" target="_balnk">QuestionPaper-SEEQ'17</a></li>
-                            <li><a href="#" target="_balnk">QuestionPaper-SEEQ'16</a></li>
+                        {% for paper in papers %}
+                            <li><a href={{paper.file}} target="_balnk">{{paper.title}}</a></li>
+                        {% endfor %}
                         </ul>
                     </div>
                     <div class="modal-footer">
@@ -698,21 +696,21 @@
                                 <div class="form-group row">
                                     <label for="inputEmail3" class="col-sm-3 col-form-label">Name</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="inputEmail3"
+                                        <input type="text" class="form-control" id="inputEmail3" name="name"
                                             placeholder="Your Name">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="inputEmail" class="col-sm-3 col-form-label">Email</label>
                                     <div class="col-sm-9">
-                                        <input type="email" class="form-control" id="inputEmail"
+                                        <input type="email" class="form-control" id="inputEmail" name="email"
                                             placeholder="Your Email Id.">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="inputSuggest" class="col-sm-6 col-form-label">Any Suggestions</label>
                                     <div class="col-sm-12">
-                                        <textarea class="form-control" id="inputSuggest"
+                                        <textarea class="form-control" id="inputSuggest" name="suggestion"
                                             placeholder="Write your suggestion here!"></textarea>
                                     </div>
                                 </div>
@@ -725,10 +723,6 @@
                                 </div>
                             </form>
 
-
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
                         </div>
 

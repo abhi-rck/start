@@ -1,13 +1,14 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
-from .models import seeq
+from .models import seeq , suggest,questionpaper
 
 # Create your views here.
 def index(request):
     return render(request,'index.html')
 
 def events(request):
-    return render(request,'events.html')
+    seeqpaper=questionpaper.objects.all()
+    return render(request,'events.html',{'papers': seeqpaper})
 
 def register(request):
     if request.method == "POST":
@@ -37,3 +38,11 @@ def newsletter(request):
 
 def visit(request):
     return render(request,'visit.html')
+
+def suggestion(request):
+    name=request.POST['name']
+    suggestion=request.POST['suggest']
+    email=request.POST['email']
+    new=suggest(name=name,suggestion=suggestion,email=email)
+    new.save()
+    return redirect("/")
