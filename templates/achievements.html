@@ -6,8 +6,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
+    <!-- Material UI Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -120,6 +120,104 @@
 
         }
 
+        .awards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .awardbox {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            text-align: justify;
+            max-width: 800px;
+        }
+
+        .awardbox>div {
+            background-color: white;
+            height: auto;
+        }
+
+        .trophyicon {
+            color: gold;
+            font-size: 50px;
+            position: absolute;
+            top: 10px;
+            left: 12px;
+        }
+
+        .yearicon {
+            color: dimgray;
+            font-size: 30px;
+
+        }
+
+        .year {
+            display: flex;
+            color: black;
+            position: absolute;
+            top: 0px;
+            left: -60px;
+            background-color: white;
+            align-items: center;
+            border-radius: 20px 0px 0px 20px;
+            box-shadow: -1px 2px;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .year {
+                display: none;
+            }
+        }
+
+        .awardbox>div {
+            display: flex;
+        }
+
+        .awardbox>div>.sideline {
+            display: block;
+            margin-top: 20px;
+            border-left: 4px solid green;
+        }
+
+        .awardcard>div {
+            margin-left: 20px;
+        }
+
+        .awardcontent {
+            display: flex;
+            flex-direction: column;
+            margin-top: 14px;
+            margin-bottom: 10px;
+        }
+
+        .awardtext {
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: justify;
+            color: rgba(131, 131, 131, 0.952);
+            margin-top: 8px;
+        }
+
+        .awardtitle {
+            font-size: 18px;
+            margin-bottom: 0px;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            font-weight: 700;
+            color: rgb(42, 71, 71);
+        }
+
+        .awardcontent>span {
+            color: #484848;
+            margin-top: 0px;
+            font-size: 13px;
+            line-height: 14px;
+        }
+
+
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;900&family=Raleway:wght@500&display=swap');
     </style>
     <title>Hello, world!</title>
@@ -170,8 +268,146 @@
             organisations. </p>
     </div>
 
-
-
+    <div class="container my-5 awards">
+        <div class="awardbox">
+            {% for award in awards %}
+            <div class="col-12 shadow awardcard">
+                <div class="sideline">
+                    <span class="material-icons trophyicon">
+                        emoji_events
+                    </span>
+                    <p class="year">
+                        <span class="material-icons yearicon">
+                            schedule
+                        </span>{{award.issueyear}}
+                    </p>
+                </div>
+                <div class="awardcontent">
+                    <p class="awardtitle">
+                        {{award.name}}
+                    </p>
+                    <span>
+                        {{award.awardedby}}
+                    </span>
+                    <p class="awardtext">
+                        {{award.summary}}
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+            <div class=" col-12 shadow awardcard">
+                <div class="sideline">
+                    <span class="material-icons trophyicon">
+                        emoji_events
+                    </span>
+                    <p class="year">
+                        <span class="material-icons yearicon">
+                            schedule
+                        </span>2020
+                    </p>
+                </div>
+                <div class="awardcontent">
+                    <p class="awardtitle">
+                        RECA AWARD
+                    </p>
+                    <span>
+                        Awarded by Reca Foundation.
+                    </span>
+                    <p class="awardtext">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto perspiciatis architecto modi
+                        quibusdam fugit officiis necessitatibus? Labore deserunt adipisci deleniti
+                        tempora amet, asperiores incidunt commodi iure omnis numquam consectetur blanditiis quis odit
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio optio beatae modi provident
+                        asperiores perferendis obcaecati repellat odit omnis magni?
+                        optio minus quos nam quia?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque,
+                        molestiae. Quos rem, delectus quasi eaque nihil eius id nisi! Lorem, ipsum dolor sit amet
+                        consectetur adipisicing elit. Molestiae neque quod rerum illum aperiam voluptas ex, repellat
+                        modi atque.
+                    </p>
+                </div>
+            </div>
+            <div class=" col-12 shadow awardcard">
+                <div class="sideline">
+                    <span class="material-icons trophyicon">
+                        emoji_events
+                    </span>
+                    <p class="year">
+                        <span class="material-icons yearicon">
+                            schedule
+                        </span>2020
+                    </p>
+                </div>
+                <div class="awardcontent">
+                    <p class="awardtitle">
+                        RAJASTHAN ENERGY CONSERVATION AWARD
+                    </p>
+                    <span>
+                        Awarded by Reca Foundation.
+                    </span>
+                    <p class="awardtext">
+                        Lorem ipsum dolor sit amet cons fugit officiis necessitatibus? Labore deserunt adipisci deleniti
+                        tempora amet, asperiores incidunt commodi iure omnis numquam consectetur blanditiis quis odit
+                        optio minus quos nam quia?
+                    </p>
+                </div>
+            </div>
+            <div class=" col-12 shadow awardcard">
+                <div class="sideline">
+                    <span class="material-icons trophyicon">
+                        emoji_events
+                    </span>
+                    <p class="year">
+                        <span class="material-icons yearicon">
+                            schedule
+                        </span>2020
+                    </p>
+                </div>
+                <div class="awardcontent">
+                    <p class="awardtitle">
+                        RAJASTHAN ENERGY CONSERVATION AWARD
+                    </p>
+                    <span>
+                        Given by Reca Foundation.
+                    </span>
+                    <p class="awardtext">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto perspiciatis architecto modi
+                        quidem quisquam dolores vero doloribus harum debitis consequatur, placeat blanditiis, commodi
+                        reiciendis asperiores quibusdam fugit officiis necessitatibus? Labore deserunt adipisci deleniti
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, ex?
+                        tempora amet, asperiores incidunt commodi iure omnis numquam consectetur blanditiis quis odit
+                        optio minus quos nam quia?
+                    </p>
+                </div>
+            </div>
+            <div class=" col-12 shadow awardcard">
+                <div class="sideline">
+                    <span class="material-icons trophyicon">
+                        emoji_events
+                    </span>
+                    <p class="year">
+                        <span class="material-icons yearicon">
+                            schedule
+                        </span>2020
+                    </p>
+                </div>
+                <div class="awardcontent">
+                    <p class="awardtitle">
+                        RAJASTHAN ENERGY CONSERVATION AWARD
+                    </p>
+                    <span>
+                        Given by Reca Foundation.
+                    </span>
+                    <p class="awardtext">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto perspiciatis architecto modi
+                        quidem quisquam dolores vero doloribus harum debitis consequatur, placeat blanditiis, commodi
+                        reiciendis asperiores quibusdam fugit officiis necessitatibus? Labore deserunt adipisci deleniti
+                        tempora amet, asperiores incidunt commodi iure omnis numquam consectetur blanditiis quis odit
+                        optio minus quos nam quia?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
     <footer class="bg mt-5" style="height:auto;">
 
         <div class="col-sm-7 mx-auto text-center pt-5 ">
@@ -182,8 +418,6 @@
             </h5>
         </div>
         <div class="container pt-4 mx-auto text-center text-white ">
-
-
 
             <!-- Button trigger modal -->
             <button type="button" id="colbt" class="btn" data-toggle="modal" data-target="#exampleModal">

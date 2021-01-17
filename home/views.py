@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
-from .models import seeq
+from .models import seeq,alumni,achievement,articles
 
 # Create your views here.
 def index(request):
@@ -24,13 +24,17 @@ def learning(request):
     return render(request,'learning.html')
 
 def article(request):
-    return render(request,'article.html')
+    article=articles.objects.all().order_by('-id')
+    recentarticles=article[:5]
+    return render(request,'article.html',{'articles':article,'recentarticles':recentarticles})
 
 def achievements(request):
-    return render(request,'achievements.html')
+    awards=achievement.objects.all().order_by('-issueyear')
+    return render(request,'achievements.html',{'awards':awards})
 
 def team(request):
-    return render(request,'team.html')
+    alumnis=alumni.objects.all()
+    return render(request,'team.html',{'alumnis':alumnis})
 
 def newsletter(request):
     return render(request,'newsletter.html')
