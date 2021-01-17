@@ -7,7 +7,8 @@ def index(request):
     return render(request,'index.html')
 
 def events(request):
-    return render(request,'events.html')
+    seeqpaper=questionpaper.objects.all()
+    return render(request,'events.html',{'papers': seeqpaper})
 
 def register(request):
     if request.method == "POST":
