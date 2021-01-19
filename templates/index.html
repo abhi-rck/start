@@ -6,45 +6,70 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap Icon CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <!-- Font Css -->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <style>
+        /* body css */
         html,
         body {
             width: 100%;
             margin: 0px;
             padding: 0px;
             overflow-x: hidden;
+            background-color: #dddce0;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            scroll-behavior: smooth;
         }
 
         body::-webkit-scrollbar {
             display: none;
         }
 
-        /* Hide scrollbar for IE, Edge and Firefox */
-        body {
-            background-color: #dddce0;
-            -ms-overflow-style: none;
-            /* IE and Edge */
-            scrollbar-width: none;
-            /* Firefox */
-        }
+        /* navbar css */
 
         .navbar {
             padding: 0px 8px;
+        }
+
+        .navbackground {
+            background-color: #26272b !important;
+        }
+
+        .navheadtext {
+            font-family: 'Raleway', sans-serif;
+            margin: 5px 0px;
+        }
+
+        .navheadtext>p {
+            margin-bottom: 5px;
         }
 
         #heading {
             font-size: 20px;
             margin: 0px;
             padding: 0px;
-            margin-top: 2px;
+            margin-top: 6px;
+            font-weight: 500;
         }
 
+        @media only screen and (max-width: 850px) {
+            .navicons {
+                margin: 8px 0px;
+                display: none;
+            }
+
+            .navheadtext>p>span {
+                color: rgb(48, 230, 139) !important;
+            }
+        }
+
+        /* hover on card css */
         .onhover {
             transition: background 1s ease;
         }
@@ -54,40 +79,7 @@
             background-color: turquoise !important;
         }
 
-        #image {
-            margin: 0px;
-            padding: 0px;
-        }
-
-        .ht {
-            height: 500px;
-        }
-
-        .mkl {
-            list-style: none;
-        }
-
-        .bg {
-            background-color: rgb(0, 45, 66);
-        }
-
-        .fs {
-            font-size: 40px;
-            font-family: Arial, Helvetica, sans-serif;
-            color: rgb(175, 175, 175);
-        }
-
-        #colbt {
-            background-color: rgb(206, 206, 206);
-            color: black;
-            border-radius: 25px;
-            transition: background 1s ease;
-        }
-
-        #colbt:hover {
-            background-color: rgb(0, 143, 156);
-        }
-
+        /* card css */
         .card-title {
             font-size: 20px;
             font-weight: 600;
@@ -119,22 +111,237 @@
         .carouselimage {
             width: 100%;
             max-height: 650px;
+            min-height: 400px;
+        }
+
+        /* footer css */
+        .site-footer {
+            background-color: #26272b;
+            padding: 45px 0 20px;
+            font-size: 15px;
+            line-height: 24px;
+            color: #737373;
+        }
+
+        .site-footer hr {
+            border-top-color: #bbb;
+            opacity: 0.5
+        }
+
+        .site-footer hr.small {
+            margin: 20px 0
+        }
+
+        .site-footer h6 {
+            color: #fff;
+            font-size: 16px;
+            text-transform: uppercase;
+            margin-top: 5px;
+            letter-spacing: 2px
+        }
+
+        .site-footer a {
+            color: #737373;
+        }
+
+        .site-footer a:hover {
+            color: rgb(0, 182, 199);
+            text-decoration: none;
+        }
+
+        .footer-links {
+            padding-left: 0;
+            list-style: none
+        }
+
+        .footer-links li {
+            display: block
+        }
+
+        .footer-links a {
+            color: #737373
+        }
+
+        .footer-links a:active,
+        .footer-links a:focus,
+        .footer-links a:hover {
+            color: rgb(0, 182, 199);
+            text-decoration: none;
+        }
+
+        .footer-links.inline li {
+            display: inline-block
+        }
+
+        .site-footer .social-icons {
+            text-align: right
+        }
+
+        .site-footer .social-icons a {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            margin-left: 6px;
+            margin-right: 0;
+            border-radius: 100%;
+            background-color: #33353d
+        }
+
+        .copyright-text {
+            margin: 0
+        }
+
+        @media (max-width:991px) {
+            .site-footer [class^=col-] {
+                margin-bottom: 30px
+            }
+        }
+
+        @media (max-width:767px) {
+            .site-footer {
+                padding-bottom: 0
+            }
+
+            .site-footer .copyright-text,
+            .site-footer .social-icons {
+                text-align: center
+            }
+        }
+
+        .social-icons {
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none
+        }
+
+        .social-icons li {
+            display: inline-block;
+            margin-bottom: 4px
+        }
+
+        .social-icons li.title {
+            margin-right: 15px;
+            text-transform: uppercase;
+            color: #96a2b2;
+            font-weight: 700;
+            font-size: 13px
+        }
+
+        .social-icons a {
+            background-color: #eceeef;
+            color: #818a91;
+            font-size: 16px;
+            display: inline-block;
+            line-height: 44px;
+            width: 44px;
+            height: 44px;
+            text-align: center;
+            margin-right: 8px;
+            border-radius: 100%;
+            -webkit-transition: all .2s linear;
+            -o-transition: all .2s linear;
+            transition: all .2s linear
+        }
+
+        .social-icons a:active,
+        .social-icons a:focus,
+        .social-icons a:hover {
+            color: #fff;
+            background-color: #29aafe
+        }
+
+        .social-icons.size-sm a {
+            line-height: 34px;
+            height: 34px;
+            width: 34px;
+            font-size: 14px
+        }
+
+
+        .social-icons a.facebook {
+            background-color: #3b5998;
+            color: white;
+        }
+
+        .social-icons a.twitter {
+            background-color: #00aced;
+            color: white;
+        }
+
+        .social-icons a.linkedin {
+            background-color: #007bb6;
+            color: white;
+        }
+
+        .social-icons a.dribbble {
+            background-color: #ea4c89;
+            color: white;
+        }
+
+        @media (max-width:767px) {
+            .social-icons li.title {
+                display: block;
+                margin-right: 0;
+                font-weight: 600
+            }
+        }
+
+        .contactinfo {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contactinfo>span {
+            align-items: center;
+        }
+
+        .contactinfo>span>i {
+            margin-right: 5px;
+        }
+
+        /* articles css */
+        .articleimagebottom {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            margin-top: 2px;
+        }
+
+        .articleimagebottom>div {
+            display: inline;
+            color: #33964a;
+            align-items: center;
+        }
+
+        .curatedby {
+            margin: 0px;
+            font-size: 15px;
+            color: #989898;
+        }
+
+        .heading {
+            margin-bottom: 3px;
+        }
+
+        .readmore {
+            margin-top: 5px;
         }
 
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;900&family=Raleway:wght@500&display=swap');
     </style>
-    <title>Hello, world!</title>
+    <title>HomePage</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
-        <div>
-            <img src="{% static 'img/Mnit_logo.png' %} " height="50px" width="50px" class="mr-auto" id="iamge">
-            <img src="{% static 'img/EC Logo.png' %} " height="52px" width="52px" class="mr-auto ml-1" id="iamge">
+    <nav class="navbar navbar-expand-md navbar-dark navbackground ">
+        <div class="navicons">
+            <img src="{% static 'img/Mnit_logo.png' %} " height="50px" width="50px" class="mr-auto">
+            <img src="{% static 'img/EC Logo.png' %} " height="52px" width="52px" class="mr-auto ml-1">
         </div>
 
-        <div class="mr-auto ml-2 text-white">
-            <p id="heading" class="mt-2">Energy Club</p>
+        <div class="mr-auto ml-2 text-white navheadtext">
+            <p id="heading"><span>E</span>nergy <span>C</span>lub</p>
             <p>Centre For Energy and Environment</p>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -144,10 +351,9 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto ">
-                <li class="nav-item active px-2">
+                <li class="nav-item px-2 active">
                     <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                 </li>
-
                 <li class="nav-item px-2">
                     <a class="nav-link" href="/events">Events</a>
                 </li>
@@ -155,11 +361,12 @@
                     <a class="nav-link" href="/achievements">Achievements</a>
                 </li>
                 <li class="nav-item px-2">
+                    <a class="nav-link" href="/alumni">Alumni</a>
+                </li>
+                <li class="nav-item px-2">
                     <a class="nav-link" href="/team">Team</a>
                 </li>
-
             </ul>
-
         </div>
     </nav>
     <div class="bd-example">
@@ -202,9 +409,11 @@
             </a>
         </div>
     </div>
-    <div class="container mt-5 shadow p-3 mb-5 bg-light bg rounded text-center onhover">
-        <h2 class="mt-5 mb-3" style="font-family:'Playfair Display', serif; font-weight: 600;">About Energy Club</h2>
-        <p class="text-justify mb-5 mt-2 p-3" style="font-family:'Raleway',sans-serif;">Energy Club was established in
+    <div class="container mt-5 shadow p-3 mb-5 bg-light bg rounded text-center onhover" id="about">
+        <h2 class="mt-5 mb-3" style="font-family:'Playfair Display', serif; font-weight: 600;">About Energy
+            Club</h2>
+        <p class="text-justify mb-5 mt-2 p-3" style="font-family:'Raleway',sans-serif;">Energy Club was
+            established in
             2007 as a student wing of centre of energy and
             environment by two of our super seniors. They had participated in Mondialgo Engineering Competition Since
             then we
@@ -219,7 +428,6 @@
 
         </p>
     </div>
-    </div>
 
 
 
@@ -227,29 +435,55 @@
         <div class="container text-center mt-5">
             <h2 style="font-family:'Playfair Display', serif; font-weight: 600;">Articles</h2>
         </div>
-
+        {% for article in articles %}
         <div class="col-sm-6 mx-auto my-5">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Sapient Interview Experience for Java Developer 2020</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="/article" class="btn btn-primary">Read more</a>
+                    <h5 class="card-title heading">{{article.heading}}</h5>
+
+                    <p class="card-text curatedby">Curated by {{article.curatedby}}</p>
+                    <hr>
+                    <div class="articleimagebottom">
+                        <div class="articletags">
+                            <i class="bi bi-tags-fill"></i>
+                            <span>{{article.tags}}</span>
+
+                        </div>
+                        <div class="articletime">
+                            <i class="bi bi-clock-fill"></i>
+                            <span>{{article.date}}</span>
+                        </div>
+                    </div>
+                    <a href="/article#{{article.id}}" class="btn btn-dark readmore">Read more</a>
                 </div>
             </div>
         </div>
+        {% endfor %}
         <div class="col-sm-6 mx-auto my-5">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Sapient Interview Experience for Java Developer 2020</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="/article" class="btn btn-primary">Read more</a>
+                    <h5 class="card-title heading">Sapient Interview Experience for Java Developer 2020</h5>
+
+                    <p class="card-text curatedby">Curated by Anish Prabhakar</p>
+                    <hr>
+                    <div class="articleimagebottom">
+                        <div class="articletags">
+                            <i class="bi bi-tags-fill"></i>
+                            <span>InfoCusp Energy </span>
+
+                        </div>
+                        <div class="articletime">
+                            <i class="bi bi-clock-fill"></i>
+                            <span>2nd March 2020</span>
+                        </div>
+                    </div>
+                    <a href="/article" class="btn btn-dark readmore">Read more</a>
                 </div>
             </div>
         </div>
         <div class="container text-right mb-5 mr-5"><a href="/article">
                 <p>See more articles--></p>
             </a></div>
-    </div>
     </div>
 
 
@@ -275,7 +509,7 @@
         <div class="card col-lg-3 col-md-5 mx-auto my-5 blockcard" style="width: 18rem;">
             <img src="{% static 'img/6.jpg' %}" class="card-img-top mt-4" alt="...">
             <div class="card-body p-0">
-                <h5 class="card-title  mt-2">Pear-Learning Sessions</h5>
+                <h5 class="card-title  mt-2">Peer-Learning Sessions</h5>
                 <hr>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                     card's
@@ -291,97 +525,72 @@
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                     card's
                     content.</p>
-                <a href="visits.html" class="btn btn-dark">Visit Page <i class="bi bi-arrow-right-square-fill"></i></a>
+                <a href="/article" class="btn btn-dark">Visit Page <i class="bi bi-arrow-right-square-fill"></i></a>
             </div>
         </div>
     </div>
 
 
 
-    <footer class="bg mt-5" style="height:auto;">
+    <!-- Site footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h6>Contact Us</h6>
+                    <p class="text-justify contactinfo">
+                        <span>Center for Energy & Environment, Dean Gate</span>
+                        <span>Malaviya National Institute of Technology Jaipur</span>
+                        <span> <i class="bi bi-telephone-fill"></i>9999889789</span>
+                        <span><i class="bi bi-question-circle-fill"></i>@energyclub@mnit.ac.in</span>
+                    </p>
+                </div>
 
-        <div class="col-sm-7 mx-auto text-center pt-5 ">
-            <h5 class="text-white">
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente laboriosam, tempore, esse fugiat
-                voluptatibus consequ
-                Recusandae, provident tempora? Quidem magni, facere porro quia ea facilis exercitationem accusamus.""
-            </h5>
-        </div>
-        <div class="container pt-4 mx-auto text-center text-white ">
+                <div class="col-xs-6 col-md-3">
+                    <h6>Sponsors</h6>
+                    <ul class="footer-links">
+                        <li><a href="https://ishrae.in/" target="_blank">Ishrae</a></li>
+                        <li><a href="https://www.ashrae.org/" target="_blank">Ashrae</a></li>
+                    </ul>
+                </div>
 
-
-
-            <!-- Button trigger modal -->
-            <button type="button" id="colbt" class="btn" data-toggle="modal" data-target="#exampleModal">
-                Suggest Something
-            </button>
-
-            <!-- Modal -->
-            <div class="modal fade text-justify" id="exampleModal" tabindex="-1" role="dialog"
-                aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Suggestion Form</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <form action="suggestion" method="POST" class="text-dark">
-                                {% csrf_token %}
-                                <div class="form-group row">
-                                    <label for="name" class="col-sm-3 col-form-label">Name</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="name" name="name" required
-                                            placeholder="Your Name">
-                                    </div>
-                                </div>
-
-                                <div class="form-group row">
-                                    <label for="inputSuggest" class="col-sm-6 col-form-label">Any Suggestions</label>
-                                    <div class="col-sm-12">
-                                        <textarea class="form-control" id="inputSuggest" name="suggest" required
-                                            placeholder="Write your suggestion here!"></textarea>
-                                    </div>
-                                </div>
-
-
-                                <div class="form-group row ">
-                                    <div class="col-sm-12 ">
-                                        <button type="submit " class=" btn btn-dark">Submit</button>
-                                    </div>
-                                </div>
-                            </form>
-
-
-                        </div>
-
-
-                    </div>
+                <div class="col-xs-6 col-md-3">
+                    <h6>Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="/">About Us</a></li>
+                        <li><a href="/newsletter">Newsletters</a></li>
+                        <li><a href="/achievements">Achievements</a></li>
+                        <li><a href="/learning">PeerLearning</a></li>
+                        <li><a href="/events">Events</a></li>
+                    </ul>
                 </div>
             </div>
-
-            <h3 class="pt-2 fs text-center">Connect With Us!</h3>
+            <hr>
         </div>
-        <div class="row pb-2">
-            <ul class="row mx-auto mkl">
-                <li class="p-2"><a href="https://www.facebook.com/search/top/?q=Energy%20Club%20-%20MNIT%20Jaipur"><img
-                            src="{% static 'img/facebook1.png' %}" height="40px" width="40px" alt=""></a></li>
-                <li class="p-2"><a href="https://www.instagram.com/the_energy_club/"><img
-                            src="{% static 'img/instagram1.png' %}" height="40px" width="40px" alt=""></a></li>
-                <li class="p-2"><a href="https://in.linkedin.com/company/energy-club-mnit-jaipur"><img
-                            src="{% static 'img/linkedin1.png' %}" height="40px" width="40px" alt=""></a></li>
-                <li class="p-2 pr-5"><a href="mailto:energyclub@mnit.ac.in"><img src="{% static 'img/gmail1.png' %}"
-                            height="40px" width="40px" alt=""></a></li>
-            </ul>
-        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by
+                        <a href="/">EnergyClub</a>.
+                    </p>
+                </div>
 
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                        <li><a class="facebook" href="https://www.facebook.com/EC.MNITJaipur/" target="_blank"><i
+                                    class="bi bi-facebook"></i></a></li>
+                        <li><a class="twitter" href="mailto:energyclub@mnit.ac.in" target="_blank"><i
+                                    class="bi bi-envelope-fill"></i></a></li>
+                        <li><a class="dribbble" href="https://www.instagram.com/the_energy_club/" target="_balnk"><i
+                                    class="bi bi-instagram"></i></a></li>
+                        <li><a class="linkedin" href="https://in.linkedin.com/company/energy-club-mnit-jaipur"
+                                target="_blank"><i class="bi bi-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </footer>
 
-    </div>
-    </div>
 
 
 

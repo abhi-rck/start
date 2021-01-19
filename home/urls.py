@@ -6,9 +6,11 @@ urlpatterns = [
     path("",views.index,name='homepage'),
     path("events",views.events,name='eventpage'),
     path("register",views.register,name='formsub'),
+    path("alumni",views.alumnis,name='alumnipage'),   
     path("team",views.team,name='teampage'),
     path("achievements",views.achievements,name='achievementpage'),
     path("article",views.article,name='articlepage'),
     path("newsletter",views.newsletter,name='newletterpage'),
     path("learning",views.learning,name='peerlearning-page'),
 ]
+

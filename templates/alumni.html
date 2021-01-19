@@ -1,0 +1,576 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <style>
+    /* body css */
+    html,
+    body {
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+      overflow-x: hidden;
+      background-color: #dddce0;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      scroll-behavior: smooth;
+    }
+
+    body::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* navbar css */
+
+    .navbar {
+      padding: 0px 8px;
+    }
+
+    .navbackground {
+      background-color: #26272b !important;
+    }
+
+    .navheadtext {
+      font-family: 'Raleway', sans-serif;
+      margin: 5px 0px;
+    }
+
+    .navheadtext>p {
+      margin-bottom: 5px;
+    }
+
+    #heading {
+      font-size: 20px;
+      margin: 0px;
+      padding: 0px;
+      margin-top: 6px;
+      font-weight: 500;
+    }
+
+    @media only screen and (max-width: 850px) {
+      .navicons {
+        margin: 8px 0px;
+        display: none;
+      }
+
+      .navheadtext>p>span {
+        color: rgb(48, 230, 139) !important;
+      }
+    }
+
+    .alumnibox {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .alumnicontainer {
+      display: flex;
+      margin: 10px 10px;
+      background-color: white;
+      padding: 20px;
+      height: 400px;
+      flex-direction: column;
+      align-items: center;
+      transition: background 1s ease;
+    }
+
+    .alumniphoto {
+      height: 140px;
+      width: 140px;
+      border-radius: 80px;
+    }
+
+    .alumnicontainer>p {
+      display: block;
+      margin: 1px;
+    }
+
+
+    .cardfields {
+      align-items: center !important;
+    }
+
+
+
+    .location {
+      font-size: 15px;
+      font-weight: 400;
+      margin-left: 1px;
+    }
+
+    .alumnicontainer:hover {
+      background-color: turquoise;
+      cursor: pointer;
+      color: white !important;
+    }
+
+
+
+
+    .alumniname {
+      margin-top: 10px !important;
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .alumniheader {
+      height: 300px;
+      background-color: white;
+    }
+
+    .alumniheader {
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .alumniheader>h1 {
+      text-align: center !important;
+      font-size: 80px;
+      margin-top: 15px;
+      color: #233466;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      line-height: 80px;
+    }
+
+    .alumniheader>p {
+      padding: 3px;
+      font-family: 'Raleway', sans-serif;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      color: #484848;
+    }
+
+    .alumniposition {
+      text-align: center;
+      font-size: 15px;
+      font-weight: 500;
+      color: inherit;
+      margin-bottom: 22px !important;
+    }
+
+    /* footer css */
+    .site-footer {
+      background-color: #26272b;
+      padding: 45px 0 20px;
+      font-size: 15px;
+      line-height: 24px;
+      color: #737373;
+    }
+
+    .site-footer hr {
+      border-top-color: #bbb;
+      opacity: 0.5
+    }
+
+    .site-footer hr.small {
+      margin: 20px 0
+    }
+
+    .site-footer h6 {
+      color: #fff;
+      font-size: 16px;
+      text-transform: uppercase;
+      margin-top: 5px;
+      letter-spacing: 2px
+    }
+
+    .site-footer a {
+      color: #737373;
+    }
+
+    .site-footer a:hover {
+      color: rgb(0, 182, 199);
+      text-decoration: none;
+    }
+
+    .footer-links {
+      padding-left: 0;
+      list-style: none
+    }
+
+    .footer-links li {
+      display: block
+    }
+
+    .footer-links a {
+      color: #737373
+    }
+
+    .footer-links a:active,
+    .footer-links a:focus,
+    .footer-links a:hover {
+      color: rgb(0, 182, 199);
+      text-decoration: none;
+    }
+
+    .footer-links.inline li {
+      display: inline-block
+    }
+
+    .site-footer .social-icons {
+      text-align: right
+    }
+
+    .site-footer .social-icons a {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      margin-left: 6px;
+      margin-right: 0;
+      border-radius: 100%;
+      background-color: #33353d
+    }
+
+    .copyright-text {
+      margin: 0
+    }
+
+    @media (max-width:991px) {
+      .site-footer [class^=col-] {
+        margin-bottom: 30px
+      }
+    }
+
+    @media (max-width:767px) {
+      .site-footer {
+        padding-bottom: 0
+      }
+
+      .site-footer .copyright-text,
+      .site-footer .social-icons {
+        text-align: center
+      }
+    }
+
+    .social-icons {
+      padding-left: 0;
+      margin-bottom: 0;
+      list-style: none
+    }
+
+    .social-icons li {
+      display: inline-block;
+      margin-bottom: 4px
+    }
+
+    .social-icons li.title {
+      margin-right: 15px;
+      text-transform: uppercase;
+      color: #96a2b2;
+      font-weight: 700;
+      font-size: 13px
+    }
+
+    .social-icons a {
+      background-color: #eceeef;
+      color: #818a91;
+      font-size: 16px;
+      display: inline-block;
+      line-height: 44px;
+      width: 44px;
+      height: 44px;
+      text-align: center;
+      margin-right: 8px;
+      border-radius: 100%;
+      -webkit-transition: all .2s linear;
+      -o-transition: all .2s linear;
+      transition: all .2s linear
+    }
+
+    .social-icons a:active,
+    .social-icons a:focus,
+    .social-icons a:hover {
+      color: #fff;
+      background-color: #29aafe
+    }
+
+    .social-icons.size-sm a {
+      line-height: 34px;
+      height: 34px;
+      width: 34px;
+      font-size: 14px
+    }
+
+
+    .social-icons a.facebook {
+      background-color: #3b5998;
+      color: white;
+    }
+
+    .social-icons a.twitter {
+      background-color: #00aced;
+      color: white;
+    }
+
+    .social-icons a.linkedin {
+      background-color: #007bb6;
+      color: white;
+    }
+
+    .social-icons a.dribbble {
+      background-color: #ea4c89;
+      color: white;
+    }
+
+    @media (max-width:767px) {
+      .social-icons li.title {
+        display: block;
+        margin-right: 0;
+        font-weight: 600
+      }
+    }
+
+    .contactinfo {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contactinfo>span {
+      align-items: center;
+    }
+
+    .contactinfo>span>i {
+      margin-right: 5px;
+    }
+
+
+
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;900&family=Raleway:wght@500&display=swap');
+  </style>
+  <title>Hello, world!</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark navbackground ">
+    <div class="navicons">
+      <img src="{% static 'img/Mnit_logo.png' %} " height="50px" width="50px" class="mr-auto">
+      <img src="{% static 'img/EC Logo.png' %} " height="52px" width="52px" class="mr-auto ml-1">
+    </div>
+
+    <div class="mr-auto ml-2 text-white navheadtext">
+      <p id="heading"><span>E</span>nergy <span>C</span>lub</p>
+      <p>Centre For Energy and Environment</p>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto ">
+        <li class="nav-item px-2">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item px-2">
+          <a class="nav-link" href="/events">Events</a>
+        </li>
+        <li class="nav-item px-2">
+          <a class="nav-link" href="/achievements">Achievements</a>
+        </li>
+        <li class="nav-item px-2 active">
+          <a class="nav-link" href="/alumni">Alumni</a>
+        </li>
+        <li class="nav-item px-2">
+          <a class="nav-link" href="/team">Team</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="alumniheader">
+    <h1 class="text-justify">Alumni Network</h1>
+    <p>We are building a network of some environmentalist over the future of time.</p>
+  </div>
+  <div class="container my-5 p-3 text-center">
+    <div class="row alumnibox text-justify">
+      {% for alumni in alumnis %}
+      <div class="col-sm-12 col-lg-5 alumnicontainer shadow rounded">
+        <img src="{{alumni.img.url}}" class="alumniphoto">
+        <p class="alumniname ">
+          {{alumni.name}}
+        </p>
+        <p class="alumniposition">
+          {{alumni.designation}}
+        </p>
+        <p class="cardfields">
+          <i class="bi bi-geo-alt-fill"></i>
+          <span class="location">{{alumni.location}}</span>
+        </p>
+        <p class="cardfields">
+          <i class="bi bi-telephone-fill"></i>
+          <span class="location">{{alumni.phonenumber}}</span>
+        </p>
+        <p class="cardfields">
+          <i class="bi bi-person-circle"></i>
+          <span class="location">{{alumni.collegeid}}</span>
+        </p>
+      </div>
+      {% endfor %}
+      <div class="col-sm-12 col-lg-5 alumnicontainer shadow rounded">
+        <img src="{% static 'img/elon.jpg' %}" class="alumniphoto">
+        <p class="alumniname">
+          Vivek Kumar
+        </p>
+        <p>
+          <i class="bi bi-geo-alt-fill"></i>
+          <span class="location">Gurugram, Uttar Pradesh.</span>
+        </p>
+
+      </div>
+      <div class="col-sm-12 col-lg-5 alumnicontainer shadow rounded">
+        <img src="{% static 'img/elon.jpg' %}" class="alumniphoto">
+        <p class="alumniname">
+          Vivek Kumar
+        </p>
+        <p>
+          <span class="material-icons">location_on</span>
+          <span class="location">Gurugram, Uttar Pradesh.</span>
+        </p>
+      </div>
+      <div class="col-sm-12 col-lg-5 alumnicontainer shadow rounded">
+        <img src="{% static 'img/elon.jpg' %}" class="alumniphoto">
+        <p class="alumniname">
+          Vivek Kumar
+        </p>
+        <p>
+          <span class="material-icons">location_on</span>
+          <span class="location">Gurugram, Uttar Pradesh.</span>
+        </p>
+      </div>
+      <div class="col-sm-12 col-lg-5 alumnicontainer shadow rounded">
+        <img src="{% static 'img/elon.jpg' %}" class="alumniphoto">
+        <p class="alumniname">
+          Vivek Kumar
+        </p>
+        <p>
+          <span class="material-icons">location_on</span>
+          <span class="location">Gurugram, Uttar Pradesh.</span>
+        </p>
+      </div>
+      <div class="col-sm-12 col-lg-5 alumnicontainer shadow rounded">
+        <img src="{% static 'img/elon.jpg' %}" class="alumniphoto">
+        <p class="alumniname">
+          Vivek Kumar
+        </p>
+        <p>
+          <span class="material-icons">location_on</span>
+          <span class="location">Gurugram, Uttar Pradesh.</span>
+        </p>
+      </div>
+      <div class="col-sm-12 col-lg-5 alumnicontainer shadow rounded">
+        <img src="{% static 'img/elon.jpg' %}" class="alumniphoto">
+        <p class="alumniname">
+          Vivek Kumar
+        </p>
+        <p>
+          <span class="material-icons">location_on</span>
+          <span class="location">Gurugram, Uttar Pradesh.</span>
+        </p>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Site footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>Contact Us</h6>
+          <p class="text-justify contactinfo">
+            <span>Center for Energy & Environment, Dean Gate</span>
+            <span>Malaviya National Institute of Technology Jaipur</span>
+            <span> <i class="bi bi-telephone-fill"></i>9999889789</span>
+            <span><i class="bi bi-question-circle-fill"></i>@energyclub@mnit.ac.in</span>
+          </p>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Sponsors</h6>
+          <ul class="footer-links">
+            <li><a href="https://ishrae.in/" target="_blank">Ishrae</a></li>
+            <li><a href="https://www.ashrae.org/" target="_blank">Ashrae</a></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="/">About Us</a></li>
+            <li><a href="/newsletter">Newsletters</a></li>
+            <li><a href="/achievements">Achievements</a></li>
+            <li><a href="/learning">PeerLearning</a></li>
+            <li><a href="/events">Events</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by
+            <a href="/">EnergyClub</a>.
+          </p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="https://www.facebook.com/EC.MNITJaipur/" target="_blank"><i
+                  class="bi bi-facebook"></i></a></li>
+            <li><a class="twitter" href="mailto:energyclub@mnit.ac.in" target="_blank"><i
+                  class="bi bi-envelope-fill"></i></a></li>
+            <li><a class="dribbble" href="https://www.instagram.com/the_energy_club/" target="_balnk"><i
+                  class="bi bi-instagram"></i></a></li>
+            <li><a class="linkedin" href="https://in.linkedin.com/company/energy-club-mnit-jaipur" target="_blank"><i
+                  class="bi bi-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

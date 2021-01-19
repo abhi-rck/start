@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <style>
+    /* body css */
     html,
     body {
       width: 100%;
@@ -22,61 +23,53 @@
       overflow-x: hidden;
       background-color: #dddce0;
       -ms-overflow-style: none;
-      /* IE and Edge */
       scrollbar-width: none;
-      /* Firefox */
+      scroll-behavior: smooth;
     }
 
     body::-webkit-scrollbar {
       display: none;
     }
 
+    /* navbar css */
+
     .navbar {
       padding: 0px 8px;
+    }
 
+    .navbackground {
+      background-color: #26272b !important;
+    }
+
+    .navheadtext {
+      font-family: 'Raleway', sans-serif;
+      margin: 5px 0px;
+    }
+
+    .navheadtext>p {
+      margin-bottom: 5px;
     }
 
     #heading {
       font-size: 20px;
       margin: 0px;
       padding: 0px;
-      margin-top: 2px;
+      margin-top: 6px;
+      font-weight: 500;
     }
 
+    @media only screen and (max-width: 850px) {
+      .navicons {
+        margin: 8px 0px;
+        display: none;
+      }
 
-    #image {
-      margin: 0px;
-      padding: 0px;
+      .navheadtext>p>span {
+        color: rgb(48, 230, 139) !important;
+      }
     }
 
-    .ht {
-      height: 500px;
-    }
-
-    .mkl {
-      list-style: none;
-    }
-
-    .bg {
-      background-color: rgb(0, 45, 66);
-    }
-
-    .fs {
-      font-size: 40px;
-      font-family: Arial, Helvetica, sans-serif;
-      color: rgb(175, 175, 175);
-    }
-
-    #colbt {
-      background-color: rgb(206, 206, 206);
-      color: black;
-      border-radius: 25px;
-      transition: background 1s ease;
-    }
-
-    #colbt:hover {
-      background-color: rgb(0, 143, 156);
-    }
+    /* maincontainer css */
 
     .maincontainer {
       display: flex;
@@ -91,13 +84,9 @@
       padding: 20px 30px;
     }
 
-    .maincontainer>div {}
-
     .containertop>img {
       width: 100%;
     }
-
-    .learningcontainer {}
 
     .learningcontainer {
       background-color: rgb(241, 241, 241);
@@ -142,20 +131,215 @@
       margin-top: 10px;
     }
 
+    .noupcoming>h2 {
+      font-size: 17px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #575757;
+      text-align: center;
+    }
+
+
+    /* footer css */
+    .site-footer {
+      background-color: #26272b;
+      padding: 45px 0 20px;
+      font-size: 15px;
+      line-height: 24px;
+      color: #737373;
+    }
+
+    .site-footer hr {
+      border-top-color: #bbb;
+      opacity: 0.5
+    }
+
+    .site-footer hr.small {
+      margin: 20px 0
+    }
+
+    .site-footer h6 {
+      color: #fff;
+      font-size: 16px;
+      text-transform: uppercase;
+      margin-top: 5px;
+      letter-spacing: 2px
+    }
+
+    .site-footer a {
+      color: #737373;
+    }
+
+    .site-footer a:hover {
+      color: rgb(0, 182, 199);
+      text-decoration: none;
+    }
+
+    .footer-links {
+      padding-left: 0;
+      list-style: none
+    }
+
+    .footer-links li {
+      display: block
+    }
+
+    .footer-links a {
+      color: #737373
+    }
+
+    .footer-links a:active,
+    .footer-links a:focus,
+    .footer-links a:hover {
+      color: rgb(0, 182, 199);
+      text-decoration: none;
+    }
+
+    .footer-links.inline li {
+      display: inline-block
+    }
+
+    .site-footer .social-icons {
+      text-align: right
+    }
+
+    .site-footer .social-icons a {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      margin-left: 6px;
+      margin-right: 0;
+      border-radius: 100%;
+      background-color: #33353d
+    }
+
+    .copyright-text {
+      margin: 0
+    }
+
+    @media (max-width:991px) {
+      .site-footer [class^=col-] {
+        margin-bottom: 30px
+      }
+    }
+
+    @media (max-width:767px) {
+      .site-footer {
+        padding-bottom: 0
+      }
+
+      .site-footer .copyright-text,
+      .site-footer .social-icons {
+        text-align: center
+      }
+    }
+
+    .social-icons {
+      padding-left: 0;
+      margin-bottom: 0;
+      list-style: none
+    }
+
+    .social-icons li {
+      display: inline-block;
+      margin-bottom: 4px
+    }
+
+    .social-icons li.title {
+      margin-right: 15px;
+      text-transform: uppercase;
+      color: #96a2b2;
+      font-weight: 700;
+      font-size: 13px
+    }
+
+    .social-icons a {
+      background-color: #eceeef;
+      color: #818a91;
+      font-size: 16px;
+      display: inline-block;
+      line-height: 44px;
+      width: 44px;
+      height: 44px;
+      text-align: center;
+      margin-right: 8px;
+      border-radius: 100%;
+      -webkit-transition: all .2s linear;
+      -o-transition: all .2s linear;
+      transition: all .2s linear
+    }
+
+    .social-icons a:active,
+    .social-icons a:focus,
+    .social-icons a:hover {
+      color: #fff;
+      background-color: #29aafe
+    }
+
+    .social-icons.size-sm a {
+      line-height: 34px;
+      height: 34px;
+      width: 34px;
+      font-size: 14px
+    }
+
+
+    .social-icons a.facebook {
+      background-color: #3b5998;
+      color: white;
+    }
+
+    .social-icons a.twitter {
+      background-color: #00aced;
+      color: white;
+    }
+
+    .social-icons a.linkedin {
+      background-color: #007bb6;
+      color: white;
+    }
+
+    .social-icons a.dribbble {
+      background-color: #ea4c89;
+      color: white;
+    }
+
+    @media (max-width:767px) {
+      .social-icons li.title {
+        display: block;
+        margin-right: 0;
+        font-weight: 600
+      }
+    }
+
+    .contactinfo {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contactinfo>span {
+      align-items: center;
+    }
+
+    .contactinfo>span>i {
+      margin-right: 5px;
+    }
+
+
+
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;900&family=Raleway:wght@500&display=swap');
   </style>
   <title>Hello, world!</title>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
-    <div>
-      <img src="{% static 'img/Mnit_logo.png' %} " height="50px" width="50px" class="mr-auto" id="iamge">
-      <img src="{% static 'img/EC Logo.png' %} " height="52px" width="52px" class="mr-auto ml-1" id="iamge">
+  <nav class="navbar navbar-expand-md navbar-dark navbackground ">
+    <div class="navicons">
+      <img src="{% static 'img/Mnit_logo.png' %} " height="50px" width="50px" class="mr-auto">
+      <img src="{% static 'img/EC Logo.png' %} " height="52px" width="52px" class="mr-auto ml-1">
     </div>
 
-    <div class="mr-auto ml-2 text-white">
-      <p id="heading" class="mt-2">Energy Club</p>
+    <div class="mr-auto ml-2 text-white navheadtext">
+      <p id="heading"><span>E</span>nergy <span>C</span>lub</p>
       <p>Centre For Energy and Environment</p>
     </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -165,83 +349,82 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto ">
-        <li class="nav-item px-2">
+        <li class="nav-item px-2 ">
           <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
-
         <li class="nav-item px-2">
           <a class="nav-link" href="/events">Events</a>
         </li>
-        <li class="nav-item px-2 active">
+        <li class="nav-item px-2">
           <a class="nav-link" href="/achievements">Achievements</a>
+        </li>
+        <li class="nav-item px-2">
+          <a class="nav-link" href="/alumni">Alumni</a>
         </li>
         <li class="nav-item px-2">
           <a class="nav-link" href="/team">Team</a>
         </li>
-
       </ul>
-
     </div>
   </nav>
 
 
   <div class="row maincontainer">
-    <div class="col-lg-3 leftcontainer">
+    <div class="col-lg-3 leftcontainer shadow my-3">
       <p class="upcomingsession sessiontopic">Upcoming Session</p>
       <hr style="border-bottom: 2px solid black;">
-      <img src="{% static 'img/podcast.jpg' %}">
-      <p class="sessiontopic upcomingsession">Sapient Interview Experience for Java Developer 2020</p>
+      {% if upcoming %}
+
+      {% for Upcoming in upcoming %}
+
+      <img src="{{Upcoming.img.url}}">
+      <p class="sessiontopic upcomingsession">{{Upcoming.heading}}</p>
       <hr style="border-bottom: 2px solid black;">
       <div class="sessioninformation">
 
-        <p><i class="bi bi-person-circle"></i><span>Nikhil Sharma</span></p>
-        <p><i class="bi bi-calendar-check-fill"></i><span>28 March,2020</span></p>
-        <p><i class="bi bi-geo-alt-fill"></i><span>CEE, MNIT Dean Gate</span></p>
-        <p><i class="bi bi-tags-fill"></i><span>Energy Polythene</span></p>
-        <p><i class="bi bi-question-circle-fill"></i><span>energyclub@mnit.ac.in</span></p>
+        <p><i class="bi bi-person-circle"></i><span>{{Upcoming.name}}</span></p>
+        <p><i class="bi bi-calendar-check-fill"></i><span>{{Upcoming.date}}</span></p>
+        <p><i class="bi bi-geo-alt-fill"></i><span>{{Upcoming.location}}</span></p>
+        <p><i class="bi bi-tags-fill"></i><span>{{Upcoming.tags}}</span></p>
+        <p><i class="bi bi-question-circle-fill"></i><span>{{Upcoming.email}}</span></p>
       </div>
+
+      {% endfor %}
+      {% else %}
+      <div class="noupcoming">
+        <h2>No Upcoming Sessions</h2>
+      </div>
+      {% endif %}
     </div>
-    <div class="col-lg-8 rightcontainer">
+    <div class="col-lg-8 rightcontainer shadow my-3">
+
+      {% for session in sessions %}
       <div class="row learningcontainer border">
         <div class="col-lg-8 containertop">
           <div class="embed-responsive embed-responsive-16by9">
-            <iframe src="https://www.youtube.com/embed/2j-Y3hZA-Ww" frameborder="0"
+            <iframe src="{{session.video}}" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
           </div>
         </div>
         <div class="col-lg-4">
-          <p class="sessiontopic">Sapient Interview Experience for Java Developer 2020</p>
+          <p class="sessiontopic">{{session.heading}}</p>
           <hr style="border-bottom: 2px solid black;">
           <div class="sessioninformation">
 
-            <p><i class="bi bi-person-circle"></i><span>Nikhil Sharma</span></p>
-            <p><i class="bi bi-calendar-check-fill"></i><span>28 March,2020</span></p>
-            <p><i class="bi bi-geo-alt-fill"></i><span>CEE, MNIT Dean Gate</span></p>
-            <p><i class="bi bi-tags-fill"></i><span>Energy Polythene</span></p>
+            <p><i class="bi bi-person-circle"></i><span>{{session.name}}</span></p>
+            <p><i class="bi bi-calendar-check-fill"></i><span>{{session.date}}</span></p>
+            <p><i class="bi bi-geo-alt-fill"></i><span>{{session.location}}</span></p>
+            <p><i class="bi bi-tags-fill"></i><span>{{session.tags}}</span></p>
           </div>
         </div>
 
         <div class="col-lg-12">
           <hr style="border-bottom: 2px solid black;">
-          <p class="sessionsummary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis vel eveniet
-            blanditiis. Eius, excepturi!
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. At doloribus non asperiores cupiditate minus,
-            aliquam ullam laboriosam deleniti quo iste natus fuga incidunt ea excepturi voluptatibus, dolore tempora
-            vitae a. Nemo, consequuntur laboriosam beatae culpa optio inventore ad nisi odio, veritatis repellendus
-            quasi accusamus tempora recusandae debitis nobis, aut at error. Iusto nesciunt repudiandae eum aspernatur ea
-            dolor, vitae aperiam voluptatum, sequi minima, voluptas quasi mollitia in nobis quaerat nulla provident. Id
-            incidunt voluptas atque dignissimos. Aspernatur modi suscipit ab pariatur nihil alias officiis quibusdam nam
-            distinctio assumenda facilis et asperiores doloremque tenetur illo reprehenderit aperiam, provident aliquid
-            officia dolorem!
-            Nam aspernatur sed veritatis! A tenetur omnis ipsa vitae delectus cupiditate quos fugit perferendis at, rem
-            impedit voluptatem aliquam sequi, assumenda laboriosam obcaecati magni quia repudiandae debitis? Accusantium
-            quidem deleniti ab laborum laboriosam ex eos? Animi, odit neque quisquam minima ea velit odio laborum eos
-            vel pariatur autem ducimus dicta eius labore iusto ad voluptatibus saepe architecto deserunt dolores tenetur
-            cum fugiat maiores nihil. Saepe tempore recusandae unde beatae omnis? Odit provident ut voluptatem quo
-            perferendis magni rerum, neque eveniet, nostrum, doloribus repellendus? Facilis, incidunt non.</p>
+          <p class="sessionsummary">{{session.detail}}</p>
         </div>
       </div>
+      {% endfor %}
       <div class="row learningcontainer border">
         <div class="col-lg-8 containertop">
           <div class="embed-responsive embed-responsive-16by9">
@@ -287,86 +470,62 @@
 
 
 
+  <!-- Site footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>Contact Us</h6>
+          <p class="text-justify contactinfo">
+            <span>Center for Energy & Environment, Dean Gate</span>
+            <span>Malaviya National Institute of Technology Jaipur</span>
+            <span> <i class="bi bi-telephone-fill"></i>9999889789</span>
+            <span><i class="bi bi-question-circle-fill"></i>@energyclub@mnit.ac.in</span>
+          </p>
+        </div>
 
+        <div class="col-xs-6 col-md-3">
+          <h6>Sponsors</h6>
+          <ul class="footer-links">
+            <li><a href="https://ishrae.in/" target="_blank">Ishrae</a></li>
+            <li><a href="https://www.ashrae.org/" target="_blank">Ashrae</a></li>
+          </ul>
+        </div>
 
-  <!-- footer  -->
-
-  <footer class="bg mt-5" style="height:auto;">
-
-    <div class="col-sm-7 mx-auto text-center pt-5 ">
-      <h5 class="text-white">
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente laboriosam, tempore, esse fugiat
-        voluptatibus consequ
-        Recusandae, provident tempora? Quidem magni, facere porro quia ea facilis exercitationem accusamus.""
-      </h5>
-    </div>
-    <div class="container pt-4 mx-auto text-center text-white ">
-
-      <!-- Button trigger modal -->
-      <button type="button" id="colbt" class="btn" data-toggle="modal" data-target="#exampleModal">
-        Suggest Something
-      </button>
-
-      <!-- Modal -->
-      <div class="modal fade text-justify" id="exampleModal" tabindex="-1" role="dialog"
-        aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Suggestion Form</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <form action="suggestion" method="POST" class="text-dark">
-                {% csrf_token %}
-                <div class="form-group row">
-                  <label for="name" class="col-sm-3 col-form-label">Name</label>
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control" id="name" name="name" required placeholder="Your Name">
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                  <label for="inputSuggest" class="col-sm-6 col-form-label">Any Suggestions</label>
-                  <div class="col-sm-12">
-                    <textarea class="form-control" id="inputSuggest" name="suggest" required
-                      placeholder="Write your suggestion here!"></textarea>
-                  </div>
-                </div>
-
-
-                <div class="form-group row ">
-                  <div class="col-sm-12 ">
-                    <button type="submit " class=" btn btn-dark">Submit</button>
-                  </div>
-                </div>
-              </form>
-
-
-            </div>
-
-
-          </div>
+        <div class="col-xs-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="/">About Us</a></li>
+            <li><a href="/newsletter">Newsletters</a></li>
+            <li><a href="/achievements">Achievements</a></li>
+            <li><a href="/learning">PeerLearning</a></li>
+            <li><a href="/events">Events</a></li>
+          </ul>
         </div>
       </div>
-
-      <h3 class="pt-2 fs text-center">Connect With Us!</h3>
+      <hr>
     </div>
-    <div class="row pb-2">
-      <ul class="row mx-auto mkl">
-        <li class="p-2"><a href="https://www.facebook.com/search/top/?q=Energy%20Club%20-%20MNIT%20Jaipur"><img
-              src="{% static 'img/facebook1.png' %}" height="40px" width="40px" alt=""></a></li>
-        <li class="p-2"><a href="https://www.instagram.com/the_energy_club/"><img
-              src="{% static 'img/instagram1.png' %}" height="40px" width="40px" alt=""></a></li>
-        <li class="p-2"><a href="https://in.linkedin.com/company/energy-club-mnit-jaipur"><img
-              src="{% static 'img/linkedin1.png' %}" height="40px" width="40px" alt=""></a></li>
-        <li class="p-2 pr-5"><a href="mailto:energyclub@mnit.ac.in"><img src="{% static 'img/gmail1.png' %}"
-              height="40px" width="40px" alt=""></a></li>
-      </ul>
-    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by
+            <a href="/">EnergyClub</a>.
+          </p>
+        </div>
 
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="https://www.facebook.com/EC.MNITJaipur/" target="_blank"><i
+                  class="bi bi-facebook"></i></a></li>
+            <li><a class="twitter" href="mailto:energyclub@mnit.ac.in" target="_blank"><i
+                  class="bi bi-envelope-fill"></i></a></li>
+            <li><a class="dribbble" href="https://www.instagram.com/the_energy_club/" target="_balnk"><i
+                  class="bi bi-instagram"></i></a></li>
+            <li><a class="linkedin" href="https://in.linkedin.com/company/energy-club-mnit-jaipur" target="_blank"><i
+                  class="bi bi-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </footer>
 
